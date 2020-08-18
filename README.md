@@ -1,6 +1,6 @@
 # Notes
 
-##How to Run this Project
+## How to Run this Project
 1. Make sure that you have Nodejs and Angular CLI installed if not click the link below.
   [Nodejs](https://nodejs.org/en/)
    [Angular CLI](https://cli.angular.io/)
@@ -12,5 +12,5 @@
 Thanks & Regards
 Rohan Pawar
 
-##Follow us on [TechAssembler](https://www.youtube.com/c/techassembler)
-##Visit our git for Ionic & Angular Demos [TechAssembler Git](https://github.com/techassembler/Ionic-5-Angular)
+## Follow us on [TechAssembler](https://www.youtube.com/c/techassembler)
+## Visit our git for Ionic & Angular Demos [TechAssembler Git](https://github.com/techassembler/Ionic-5-Angular)
