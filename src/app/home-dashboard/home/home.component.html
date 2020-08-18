@@ -1,0 +1,66 @@
+<mat-toolbar color="primary">
+    <div class="header">
+        <div> <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+                (click)="_openSideNav()">
+                <mat-icon>menu</mat-icon>
+            </button>
+
+            <span>Notes</span>
+        </div>
+        <div>
+            <button mat-icon-button (click)="addNotes()"><span class="material-icons">
+                    edit
+                </span>
+            </button>
+            <button mat-icon-button (click)="_saveAllNotes()"> <span class="material-icons">
+                    save
+                </span>
+            </button>
+        </div>
+    </div>
+</mat-toolbar>
+<div class="over-lay" (click)="_closeSideNav()"></div>
+<!-- searching code -->
+<!-- <div>
+    <input type="text" placeholder="Search notes" [(ngModel)]="searchText" [value]="searchText">
+    <span class="material-icons">
+        search
+    </span>
+</div> -->
+<!-- <div><button mat-button (click)="addNotes()"><span class="material-icons">
+            edit
+        </span>
+    </button>
+    <div>Add New</div>
+</div> -->
+<div class="container">
+    <div class="side-nav w35 scroll-size" id="mySidebar">
+        <mat-card class="margin10" *ngFor="let item of form.controls.notes?.value;let i=index;"
+            (click)="makeVisible(i)">
+            <input class="input-css" type="text" placeholder="New Text" [value]="item?.text" readonly>
+            <label>
+                {{item?.time | date:'MMMM dd, yyyy'}} at {{item?.time | date:'h:mm a'}}
+            </label>
+        </mat-card>
+    </div>
+    <div class="w65">
+        <form [formGroup]="form">
+            <div formArrayName="notes"
+                *ngFor="let item of form.controls.notes?.value; let i = index; trackBy:trackBynoteFn"
+                [hidden]="i != show">
+                <mat-card>
+                    <div [formGroupName]="i" class="txt-center">
+                        <label>
+                            {{item.time | date:'MMMM dd, yyyy'}} at {{item.time | date:'h:mm a'}}
+                        </label>
+                        <textarea formControlName="text" type="text" placeholder="New Text"></textarea>
+                    </div>
+                </mat-card>
+                <div class="delete-btn"><button mat-icon-button (click)="removeNotes(i)"><span class="material-icons">
+                            delete
+                        </span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

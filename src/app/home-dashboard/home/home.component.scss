@@ -1,0 +1,155 @@
+.txt-center {
+    text-align: center;
+}
+.w35 {
+    width: 25%;
+}
+.w65 {
+    width: 70%;
+}
+
+.container {
+    display: flex;
+}
+
+.input-css {
+    border: 0;
+    appearance: none;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 2%;
+    right: 0;
+    color: white;
+}
+textarea {
+    width: 100%;
+    border: 0;
+    appearance: none;
+    height: 70vh;
+}
+
+.margin10 {
+    margin: 10px;
+}
+.scroll-size {
+    height: 80vh;
+    overflow-y: scroll; 
+}
+
+.header {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+.header > div {
+    display: flex;
+    align-items: center;
+}
+.example-icon {
+    display: none;
+}
+
+.side-nav-open {
+    display: block;
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+/* Portrait */
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+@media only screen and (max-device-width: 365px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    .example-icon {
+        display: block;
+    }
+    .side-nav {
+        display: none;
+    }
+    .w65 {
+        width: 100%;
+    }
+    .delete-btn {
+        top: 1%;
+    }
+}
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+    .example-icon {
+        display: block;
+    }
+    .side-nav {
+        display: none;
+    }
+    .w65 {
+        width: 100%;
+    }
+    .delete-btn {
+        top: 1%;
+    }
+}
+/* ----------- iPhone X ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+    .example-icon {
+        display: block;
+    }
+    .side-nav {
+        display: none;
+    }
+    .w65 {
+        width: 100%;
+    }
+    .delete-btn {
+        top: 1%;
+    }
+}
+
+/* ----------- Galaxy S4, S5 and Note 3 ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+    .example-icon {
+        display: block;
+    }
+    .side-nav {
+        display: none;
+    }
+    .w65 {
+        width: 100%;
+    }
+    .delete-btn {
+        top: 1%;
+    }
+}
+/* ----------- Google Pixel ----------- */
+
+/* Portrait */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+    .example-icon {
+        display: block;
+    }
+    .side-nav {
+        display: none;
+    }
+    .w65 {
+        width: 100%;
+    }
+    .delete-btn {
+        top: 1%;
+    }
+}
