@@ -36,17 +36,21 @@ export class HomeComponent implements OnInit {
     });
     let allNotesData = JSON.parse(window.localStorage.getItem('allNotes'));
     console.log(allNotesData)
-    if (allNotesData.lenth > 0)
-      this.addNotes();
-    else {
-      const form = this.form.get("notes") as FormArray;
-      allNotesData.forEach(element => {
-        let val = this.fb.group({
-          text: element.text,
-          time: element.time
+    if (allNotesData) {
+      if (allNotesData.lenth > 0)
+        this.addNotes();
+      else {
+        const form = this.form.get("notes") as FormArray;
+        allNotesData.forEach(element => {
+          let val = this.fb.group({
+            text: element.text,
+            time: element.time
+          });
+          form.push(val);
         });
-        form.push(val);
-      });
+      }
+    } else {
+      this.addNotes();
     }
   }
 
